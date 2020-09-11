@@ -1,12 +1,35 @@
 <?php include('header.php'); ?>
-<div class="features">
-  <h3>Featured Universities</h3>
-  <img src="image/macquarieuniv.png" alt="">
-  <img src="image/charlesuniv.png" alt="">
-  <img src="image/newcastleuniv.png" alt="">
-  <img src="image/latrobeuniv.png" alt="">
-</div>
+<div class="container-fluid bg-light  pt-2 pb-4 ">
+    <div class="page-header text-center ">
+      <h3>Featured Universities</h3>
+    </div>
+    <div id="carousel" class="carousel slide" data-interval="2000" data-ride="carousel" >
 
+        <div class="carousel-inner ">
+          <div class="carousel-item active carouselimg ">
+            <img src="image/macquarieuniv.png" class="d-block img-fluid mx-auto"  alt="macquarieuniv">
+          </div>
+          <div class="carousel-item carouselimg">
+            <img src="image/charlesuniv.png" class="d-block img-fluid mx-auto" alt="charlesuniv">
+          </div>
+          <div class="carousel-item carouselimg">
+            <img src="image/newcastleuniv.png" class="d-block img-fluid mx-auto" alt="newcastleuniv">
+          </div>
+          <div class="carousel-item carouselimg">
+            <img src="image/latrobeuniv.png" class="d-block img-fluid mx-auto" alt="latrobeuniv">
+          </div>
+        </div>
+
+        <a class="carousel-control-prev " href="#carousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon " aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+  </div>
 
 <div class="ourservices">
   <h3>Our services</h3>

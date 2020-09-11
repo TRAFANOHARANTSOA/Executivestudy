@@ -2,3 +2,37 @@
 body {
 font-family:'metropolis medium', arial, sans-serif;
 }
+
+
+div.headerbg{
+  background-image: url(./image/etudiante.png);
+  background-repeat: no-repeat;
+  background-size: 550px;
+  height: 700px;;
+  background-position-x: right;
+  background-position-y: bottom;
+}
+
+a.border {
+    border: solid 2px #717cff!important;
+    border-radius: .75em!important;
+    width: 80px!important;
+}
+
+ul li a.active span, .nav-link span:hover{
+border-bottom: 2px solid #717cff!important;
+}
+.headertitle h1 span{
+  color:#717cff;
+}
+.headertitle h1{
+  margin-top: 20vh;
+  line-height: 8vh;
+  width:30%;
+}
+.headerbtn{
+  margin-top:15vh;
+}
+.headerfavicons{
+  margin-top: 15vh;
+}
