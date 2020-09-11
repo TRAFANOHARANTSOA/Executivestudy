@@ -44,12 +44,12 @@
           <h1>We Help to <span>Build</span> Your Dream</h1>
         </div>
         <div class="container headerbtn">
-        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+        <button type="button" class="btn btn-primary btn-lg">Apply online →</button>
         </div>
         <div class="container headerfavicons">
-        <img src="image/facebook.png" alt="">
-        <img src="image/twitter.png" alt="">
-        <img src="image/insta.png" alt="">
+        <a href="#"><img src="image/facebook.png" alt=""></a>
+        <a href="#"><img src="image/twitter.png" alt=""></a>
+        <a href="#"> <img src="image/insta.png" alt=""></a>
         </div>
       </div>
 

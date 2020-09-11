@@ -1,4 +1,4 @@
-<div class="container-fluid bg-secondary">
+<div class="container-fluid bgcolor">
 
 
 <div class="logo"> <img src="image/logofooter.png" alt="">
