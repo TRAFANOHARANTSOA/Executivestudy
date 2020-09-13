@@ -1,34 +1,75 @@
 <?php include('header.php'); ?>
-<div class="container-fluid bg-light  pt-2 pb-4 featurescarrousel">
-    <div class="page-header text-center ">
-      <h3 class="text-capitalize mt-5 mb-5">featured universities</h3>
-    </div>
-    <div id="carousel" class="carousel slide mt-5" data-interval="2000" data-ride="carousel" >
-        <div class="carousel-inner ">
-          <div class="carousel-item active carouselimg ">
-            <img src="image/macquarieuniv.png" class="d-block img-fluid mx-auto"  alt="macquarieuniv">
-          </div>
-          <div class="carousel-item carouselimg">
-            <img src="image/charlesuniv.png" class="d-block img-fluid mx-auto" alt="charlesuniv">
-          </div>
-          <div class="carousel-item carouselimg">
-            <img src="image/newcastleuniv.png" class="d-block img-fluid mx-auto" alt="newcastleuniv">
-          </div>
-          <div class="carousel-item carouselimg">
-            <img src="image/latrobeuniv.png" class="d-block img-fluid mx-auto" alt="latrobeuniv">
-          </div>
-        </div>
-        <a class="carousel-control-prev " href="#carousel" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon " aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
+    <!-- Slideshow container -->
+  <div class="container-fluid horizontalscrollslide">
+    <!-- Full-width images with number and caption text -->
+      <div class="mySlide">
+        <a href="#"><img src="image/macquarieuniv.png" class="d-block img-fluid mx-auto"  alt="macquarieuniv"></a>
       </div>
+      <div class="mySlide">
+      <a href="#"><img src="image/charlesuniv.png" class="d-block img-fluid mx-auto" alt="charlesuniv"></a>
+      </div>
+      <div class="mySlide">
+        <a href="#"><img src="image/newcastleuniv.png" class="d-block img-fluid mx-auto" alt="newcastleuniv"> </a>
+      </div>
+      <div class="mySlide">
+      <a href="#"><img src="image/latrobeuniv.png" class="d-block img-fluid mx-auto" alt="latrobeuniv"></a>
+      </div>
+        <div class="mySlide">
+        <a href="#"><img src="image/macquarieuniv.png" class="d-block img-fluid mx-auto"  alt="macquarieuniv"></a>
+      </div>
+      <div class="mySlide">
+      <a href="#"><img src="image/charlesuniv.png" class="d-block img-fluid mx-auto" alt="charlesuniv"></a>
+      </div>
+      <div class="mySlide">
+        <a href="#"><img src="image/newcastleuniv.png" class="d-block img-fluid mx-auto" alt="newcastleuniv"> </a>
+      </div>
+      <div class="mySlide">
+      <a href="#"><img src="image/latrobeuniv.png" class="d-block img-fluid mx-auto" alt="latrobeuniv"></a>
+    </div>
+    </div>
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
   </div>
 
+  <div class="container-fluid bg-light  pt-2 pb-4 featurescarrousel">
+      <div class="fontfeatures text-center ">
+        <h3 class="text-capitalize mt-5 mb-5 ">featured universities</h3>
+      </div>
+      <div id="carousel" class="carousel slide mt-5" data-interval="2000" data-ride="carousel" >
+          <div class="carousel-inner ">
+            <div class="carousel-item active carouselimg">
+              <a href="#"><img src="image/macquarieuniv.png" class="d-block img-fluid mx-auto"  alt="macquarieuniv"></a>
+              <a href="#"><img src="image/charlesuniv.png" class="d-block img-fluid mx-auto" alt="charlesuniv"></a>
+              <a href="#"><img src="image/newcastleuniv.png" class="d-block img-fluid mx-auto" alt="newcastleuniv"> </a>
+              <a href="#"><img src="image/latrobeuniv.png" class="d-block img-fluid mx-auto" alt="latrobeuniv"></a>
+            </div>
+            <div class="carousel-item carouselimg">
+              <a href="#"><img src="image/charlesuniv.png" class="d-block img-fluid mx-auto" alt="charlesuniv"></a>
+            </div>
+            <div class="carousel-item carouselimg">
+              <a href="#"><img src="image/newcastleuniv.png" class="d-block img-fluid mx-auto" alt="newcastleuniv"> </a>
+            </div>
+            <div class="carousel-item carouselimg">
+              <a href="#"><img src="image/latrobeuniv.png" class="d-block img-fluid mx-auto" alt="latrobeuniv"></a>
+            </div>
+          </div>
+          <a class="carousel-control-prev " href="#carousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon " aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+    </div>
   <div class="container-fluid bg-light shadow shadow-md  pt-2">
       <div class="page-header text-center ">
         <h3>Our services</h3>
@@ -107,10 +148,10 @@
           <h5 class="card-text">How a Little Bit of Hydra Regrows a Whole Animal.</h5>
         </div>
       </div>
-      <div class="">
+    </div>
+    <div class="row justify-content-around mt-5 ">
       <button type="button" class="btn btn-primary btn-lg">Large button</button>
       </div>
-
     </div>
   </div>
 

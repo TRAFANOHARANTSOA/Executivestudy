@@ -40,16 +40,19 @@
               </ul>
             </div>
         </nav>
-        <div class="container headertitle">
+        <div class="container">
+
+        <div class="row headertitle">
           <h1>We Help to <span>Build</span> Your Dream</h1>
         </div>
-        <div class="container headerbtn">
+        <div class="row headerbtn">
         <button type="button" class="btn btn-primary btn-lg">Apply online →</button>
         </div>
-        <div class="container headerfavicons">
+        <div class="row headerfavicons">
         <a href="#"><img src="image/facebook.png" alt=""></a>
         <a href="#"><img src="image/twitter.png" alt=""></a>
         <a href="#"> <img src="image/insta.png" alt=""></a>
+        </div>
         </div>
       </div>
 
