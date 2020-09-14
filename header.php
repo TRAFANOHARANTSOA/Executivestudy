@@ -13,7 +13,7 @@
       <div class="container-fluid headerbg">
         <nav class="container navbar navbar-expand-lg navbar-light">
           <a class="navbar-brand" href="#"><img src="image/Logo.png" ></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler border-color-none" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -40,19 +40,19 @@
               </ul>
             </div>
         </nav>
-        <div class="container">
-
-        <div class="row headertitle">
-          <h1>We Help to <span>Build</span> Your Dream</h1>
-        </div>
-        <div class="row headerbtn">
-        <button type="button" class="btn btn-primary btn-lg">Apply online →</button>
-        </div>
-        <div class="row headerfavicons">
-        <a href="#"><img src="image/facebook.png" alt=""></a>
-        <a href="#"><img src="image/twitter.png" alt=""></a>
-        <a href="#"> <img src="image/insta.png" alt=""></a>
-        </div>
+        <div class="container ">
+          <div class="container row titlerow">
+            <div class="col-md-4 col-sm-4 headertitle ">
+              <h1>We Help to <span>Build</span> Your Dream</h1>
+            </div>
+            <div class="col-md col-sm headerbtn">
+              <button type="button" class="btn btn-primary btn-lg">Apply online →</button>
+            </div>
+            <div class="col-md col-sm headerfavicons">
+              <a href="#"><img src="image/facebook.png" alt=""></a>
+              <a href="#"><img src="image/twitter.png" alt=""></a>
+              <a href="#"> <img src="image/insta.png" alt=""></a>
+            </div>
         </div>
       </div>
 

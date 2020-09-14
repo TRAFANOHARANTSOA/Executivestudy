@@ -2,13 +2,16 @@
 body {
 font-family:'metropolis medium', arial, sans-serif;
 }
-
+.navbar-light .navbar-toggler {
+    color: rgba(0,0,0,.5);
+    border:none;
+  }
 
 div.headerbg{
   background-image: url(./image/etudiante.png);
   background-repeat: no-repeat;
-  background-size: 550px;
-  height: 700px;;
+  background-size: 500px;
+  height: 600px;
   background-position-x: right;
   background-position-y: bottom;
 }
@@ -22,38 +25,82 @@ a.border {
 ul li a.active span, .nav-link span:hover{
 border-bottom: 2px solid #717cff!important;
 }
+.headertitle{
+  padding-top: 20vh;
+  padding-bottom: 15vh;
+}
 .headertitle h1 span{
   color:#717cff;
 }
-.headertitle h1{
-  margin-top: 20vh;
-  line-height: 5vh;
-  width:30%;
-}
 .headerbtn{
-  margin-top:20vh;
+padding-bottom: 5vh;
 }
-.headerfavicons{
-  margin-top: 10vh;
+.titlerow{
+display:block;
 }
 
-.horizontalscrollslide{
-height:35vh;
-overflow-x: hidden;
-overflow-y: auto;
+.slideshow-container {
+  background-color: #FAFAFA;
+  height: 40vh;
+  margin: auto;
 }
-.horizontalscrollslide div{
-display:inline-block;
-width: 22vw;
-height: 30vh;
+
+.mySlides {
+  height: 20vh;
 }
-.featurescarrousel{
-  height:35vh;
+/* Hide the images by default */
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+
+}
+
+.dot.active, .dot:hover {
+  background-color: #717171;
 }
 
 .fontfeatures h3{
   font-size:30px;
 }
-.bgcolor{
+
+.ourservices{
+  height: 900px;
+}
+.servicescards, .newscards, .eventscards, .countriescards, .testimonialscards {
+  width: 20rem;
+  border-radius: 0.5rem;
+  border:none;
+}
+.eventspart{
+  height:700px;
+}
+.rowbgevents{
+  height:400px;
+}
+
+.footerbgcolor{
   background-color:#717cff;
+}
+
+.footerfavicons {
+    padding-top: 180px;
+}
+@media screen and (max-width: 1024px){
+  div.headerbg{
+  background-size: 400px;
+  height: 500px;
+  }
+}
+
+@media screen and (max-width: 692px){
+  div.headerbg{
+  background-image: none;
+  }
 }
