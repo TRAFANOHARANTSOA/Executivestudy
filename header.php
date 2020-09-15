@@ -11,7 +11,8 @@
   <body>
     <header >
       <div class="container-fluid headerbg">
-        <nav class="container navbar navbar-expand-lg navbar-light">
+        <div class="container ">
+        <nav class="navbar navbar-expand-lg navbar-light">
           <a class="navbar-brand" href="#"><img src="image/Logo.png" ></a>
             <button class="navbar-toggler border-color-none" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -40,23 +41,19 @@
               </ul>
             </div>
         </nav>
-        <div class="container ">
           <div class="container row titlerow">
-            <div class="col-md-4 col-sm-4 headertitle ">
+            <div class="col-xl-4 col-lg-5 col-md-7 col-sm-10  headertitle  ">
               <h1>We Help to <span>Build</span> Your Dream</h1>
             </div>
-            <div class="col-md col-sm headerbtn">
-              <button type="button" class="btn btn-primary btn-lg">Apply online →</button>
+            <div class="col-xl-4 col-lg-5 col-md-7 col-sm-10 headerbtn">
+              <button type="button" class="btn  btn-lg">Apply online →</button>
             </div>
-            <div class="col-md col-sm headerfavicons">
+            <div class="col-xl-4 col-lg-5 col-md-7 col-sm-10 headerfavicons">
               <a href="#"><img src="image/facebook.png" alt=""></a>
               <a href="#"><img src="image/twitter.png" alt=""></a>
               <a href="#"> <img src="image/insta.png" alt=""></a>
             </div>
         </div>
       </div>
-
-
-
-
+    </div>
   </header>

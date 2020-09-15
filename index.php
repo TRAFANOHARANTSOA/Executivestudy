@@ -1,22 +1,75 @@
 <?php include('header.php'); ?>
     <!-- Slideshow container -->
-  <div class="slideshow-container">
+  <div class="container-fluid slideshow-container">
     <div class="fontfeatures text-center pt-3 pb-5">
       <h3 class="text-capitalize">featured universities</h3>
     </div>
     <!-- Full-width images with number and caption text -->
       <div class="mySlides">
+        <div class="slider">
+        <div class="slideslogo">
         <a href="#"><img src="image/macquarieuniv.png" class="d-block img-fluid mx-auto pt-3"  alt="macquarieuniv"></a>
+        </div>
+        <div class="slideslogo">
+        <a href="#"><img src="image/charlesuniv.png" class="d-block img-fluid mx-auto pt-3" alt="charlesuniv"></a>
+        </div>
+        <div class="slideslogo">
+        <a href="#"><img src="image/newcastleuniv.png" class="d-block img-fluid mx-auto pt-3" alt="newcastleuniv"> </a>
+        </div>
+        <div class="slideslogo">
+        <a href="#"><img src="image/latrobeuniv.png" class="d-block img-fluid mx-auto pt-3" alt="latrobeuniv"></a>
+        </div>
       </div>
-      <div class="mySlides">
+    </div>
+    <div class="mySlides">
+      <div class="slider">
+      <div class="slideslogo">
+
       <a href="#"><img src="image/charlesuniv.png" class="d-block img-fluid mx-auto pt-3" alt="charlesuniv"></a>
       </div>
-      <div class="mySlides">
-        <a href="#"><img src="image/newcastleuniv.png" class="d-block img-fluid mx-auto pt-3" alt="newcastleuniv"> </a>
+      <div class="slideslogo">
+    <a href="#"><img src="image/macquarieuniv.png" class="d-block img-fluid mx-auto pt-3"  alt="macquarieuniv"></a>
       </div>
-      <div class="mySlides">
+      <div class="slideslogo">
+      <a href="#"><img src="image/newcastleuniv.png" class="d-block img-fluid mx-auto pt-3" alt="newcastleuniv"> </a>
+      </div>
+      <div class="slideslogo">
       <a href="#"><img src="image/latrobeuniv.png" class="d-block img-fluid mx-auto pt-3" alt="latrobeuniv"></a>
       </div>
+    </div>
+  </div>
+  <div class="mySlides">
+    <div class="slider">
+    <div class="slideslogo">
+    <a href="#"><img src="image/macquarieuniv.png" class="d-block img-fluid mx-auto pt-3"  alt="macquarieuniv"></a>
+    </div>
+    <div class="slideslogo">
+    <a href="#"><img src="image/newcastleuniv.png" class="d-block img-fluid mx-auto pt-3" alt="newcastleuniv"> </a>
+    </div>
+    <div class="slideslogo">
+    <a href="#"><img src="image/charlesuniv.png" class="d-block img-fluid mx-auto pt-3" alt="charlesuniv"></a>
+    </div>
+    <div class="slideslogo">
+    <a href="#"><img src="image/latrobeuniv.png" class="d-block img-fluid mx-auto pt-3" alt="latrobeuniv"></a>
+    </div>
+  </div>
+</div>
+<div class="mySlides">
+  <div class="slider">
+  <div class="slideslogo">
+  <a href="#"><img src="image/macquarieuniv.png" class="d-block img-fluid mx-auto pt-3"  alt="macquarieuniv"></a>
+  </div>
+  <div class="slideslogo">
+  <a href="#"><img src="image/charlesuniv.png" class="d-block img-fluid mx-auto pt-3" alt="charlesuniv"></a>
+  </div>
+  <div class="slideslogo">
+  <a href="#"><img src="image/latrobeuniv.png" class="d-block img-fluid mx-auto pt-3" alt="latrobeuniv"></a>
+  </div>
+  <div class="slideslogo">
+  <a href="#"><img src="image/newcastleuniv.png" class="d-block img-fluid mx-auto pt-3" alt="newcastleuniv"> </a>
+  </div>
+</div>
+</div>
 
   <!-- The dots/circles -->
   <div class="container text-center">
@@ -59,7 +112,7 @@
           </a>
         </div>
     </div> -->
-  <div class="container-fluid bg-light shadow shadow-xl pt-2 ourservices">
+  <div class="container-fluid bg-light pt-2 ourservices">
       <div class="page-header text-center ">
         <h3>Our services</h3>
           <p>Executive Trade International is an University Application Centre, guiding Bangladeshi students to Australian, British, Canadian and Irish universities!</p>
@@ -142,7 +195,7 @@
       <button type="button" class="btn btn-primary btn-lg mb-3">Join here  →  </button>
       </div>
     </div>
-  </div>
+
 
 
   <div class="container  pt-2 eventspart">
@@ -177,7 +230,6 @@
             <a href="#" class="card-link ">Learn more → </a>
             <p class="card-text"><i class="far fa-clock pr-2"></i> 10:00 AM 2:00 PM</p>
         </div>
-
       </div>
       <div class="container text-center">
         <span class="dot" onclick="currentSlide(1)"></span>
@@ -186,7 +238,6 @@
         <span class="dot" onclick="currentSlide(4)"></span>
       </div>
     </div>
-
     <div class="container-fluid bg-light   pt-2">
         <div class="page-header text-center ">
           <h3>Countries We Covered</h3>
@@ -274,9 +325,6 @@
   <div class="">
     <h3>Ready to chase your dreams?</h3>
   </div>
-<button type="button" class="btn btn-primary btn-lg">Apply Online → </button>
+  <button type="button" class="btn btn-primary btn-lg">Apply Online → </button>
 </div>
-
-
-
 <?php include('footer.php'); ?>

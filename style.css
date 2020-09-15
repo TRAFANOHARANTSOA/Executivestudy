@@ -1,6 +1,10 @@
 /*body*/
 body {
 font-family:'metropolis medium', arial, sans-serif;
+
+}
+.container-fluid{
+  max-width: 1540px;
 }
 .navbar-light .navbar-toggler {
     color: rgba(0,0,0,.5);
@@ -10,8 +14,8 @@ font-family:'metropolis medium', arial, sans-serif;
 div.headerbg{
   background-image: url(./image/etudiante.png);
   background-repeat: no-repeat;
-  background-size: 500px;
-  height: 600px;
+  background-size: 600px;
+  height:700px;
   background-position-x: right;
   background-position-y: bottom;
 }
@@ -25,28 +29,36 @@ a.border {
 ul li a.active span, .nav-link span:hover{
 border-bottom: 2px solid #717cff!important;
 }
-.headertitle{
-  padding-top: 20vh;
-  padding-bottom: 15vh;
-}
 .headertitle h1 span{
   color:#717cff;
 }
-.headerbtn{
-padding-bottom: 5vh;
-}
 .titlerow{
 display:block;
+}
+.headertitle{
+  padding-top: 15vh;
+  padding-bottom: 10vh;
+}
+
+.headerbtn .btn{
+background-color: #717cff;
+color:#FFFF;
+margin-bottom: 15vh;
 }
 
 .slideshow-container {
   background-color: #FAFAFA;
   height: 40vh;
   margin: auto;
+  position:relative;
 }
 
 .mySlides {
   height: 20vh;
+}
+div .slider{
+  display:flex!important;
+  justify-content: space-around;
 }
 /* Hide the images by default */
 
@@ -91,12 +103,6 @@ display:block;
 
 .footerfavicons {
     padding-top: 180px;
-}
-@media screen and (max-width: 1024px){
-  div.headerbg{
-  background-size: 400px;
-  height: 500px;
-  }
 }
 
 @media screen and (max-width: 692px){

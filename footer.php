@@ -1,5 +1,5 @@
 <div class="containe-fluid">
-  <div class="row justify-content-around mt-5 text-white footerbgcolor">
+  <div class="row justify-content-around mt-5 mr-0 ml-0 text-white footerbgcolor">
     <div class="col-md-3 ml-5 mt-5 logo"> <img src="image/logofooter.png" alt="">
       <p class=" mt-3 mb-5">Concord Royal Court (3rd floor) <br> Dhanmondi, Dhaka 1209, Bangladesh.</p>
       <p class="mt-5" >© 2020 Executive Trade International.</p>
