@@ -4,7 +4,7 @@
     <div class="fontfeatures text-center pt-3 pb-5">
       <h3 class="text-capitalize">featured universities</h3>
     </div>
-    <!-- Full-width images with number and caption text -->
+    <!-- Full-width images with number and caption text-->
       <div class="mySlides">
         <div class="slider">
         <div class="slideslogo">
@@ -73,12 +73,13 @@
 
   <!-- The dots/circles -->
   <div class="container text-center">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
-    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot dotfeatures" onclick="currentSlide(1)"></span>
+    <span class="dot dotfeatures" onclick="currentSlide(2)"></span>
+    <span class="dot dotfeatures" onclick="currentSlide(3)"></span>
+    <span class="dot dotfeatures" onclick="currentSlide(4)"></span>
   </div>
 </div>
+
 
 <!--  <div class="container-fluid bg-light  pt-2 pb-4 featurescarrousel">
       <div class="fontfeatures text-center ">
@@ -196,48 +197,53 @@
       </div>
     </div>
 
-
-
-  <div class="container  pt-2 eventspart">
-      <div class="page-header text-center mt-3">
+    <div class="container-fluid slideshowevents-container">
+      <div class="fontfeatures text-center pt-3 pb-5">
         <h3>Upcoming University Events</h3>
         <p>Sunt autem nusquam hoc epicurus in gravissimo bello animadversionis metu degendae praesidia firmissima. Torquatos nostros? quos tu paulo ante cum teneam sententiam, quid bonum esse vult.</p>
       </div>
-      <div class="row justify-content-around mt-5 mb-5 pt-2 pb-2  border-none">
-        <div class="card  eventscards bg-white shadow  shadow-xl p-2 rowbgevents" style="width: 20rem;">
-          <div class="card-body d-flex flex-row">
-            <div class="bg-secondary rounded text-white mr-3" height="50px" width="50px" alt="avatar">
-              <p class="card-text">23 Déc</p>
+      <!-- Full-width images with number and caption text -->
+        <div class="mySlidesevents">
+          <div class="sliderevents">
+              <div class="card  eventscards bg-white shadow  shadow-xl p-2 rowbgevents" style="width: 20rem;">
+              <div class="card-body d-flex flex-row">
+                <div class="bg-secondary rounded text-white mr-3" height="50px" width="50px" alt="avatar">
+                  <p class="card-text">23 Déc</p>
+                </div>
+                <div>
+                  <h5 class="card-title font-weight-bold mb-2">Macquarie University, Sydney, Australia</h5>
+                </div>
+              </div>
+                <p class="card-text">Maiores voluptas laboriosam non dolorum perferendis fuga repellat aut. Blanditiis quos in minus. Voluptatum quia quia voluptas voluptatem vero ex possimus. Iure et consectetur dolorem dicta accusantium fugiat.</p>
+                <a href="#" class="card-link ">Learn more → </a>
+                <p class="card-text"><i class="far fa-clock pr-2"></i> 10:00 AM 2:00 PM</p>
             </div>
-            <div>
-              <h5 class="card-title font-weight-bold mb-2">Macquarie University, Sydney, Australia</h5>
+            <div class="card eventscards bg-white shadow  shadow-xl p-2" style="width: 20rem;">
+              <div class="card-body d-flex flex-row">
+                <div class="bg-secondary rounded text-white mr-3" height="50px" width="50px" alt="avatar">
+                  <p class="card-text">17 Oct</p>
+                </div>
+                <div>
+                  <h5 class="card-title font-weight-bold mb-2">Federation University, Australia</h5>
+                </div>
+              </div>
+                <p class="card-text">Maiores voluptas laboriosam non dolorum perferendis fuga repellat aut. Blanditiis quos in minus. Voluptatum quia quia voluptas voluptatem vero ex possimus. Iure et consectetur dolorem dicta accusantium fugiat.</p>
+                <a href="#" class="card-link ">Learn more → </a>
+                <p class="card-text"><i class="far fa-clock pr-2"></i> 10:00 AM 2:00 PM</p>
             </div>
-          </div>
-            <p class="card-text">Maiores voluptas laboriosam non dolorum perferendis fuga repellat aut. Blanditiis quos in minus. Voluptatum quia quia voluptas voluptatem vero ex possimus. Iure et consectetur dolorem dicta accusantium fugiat.</p>
-            <a href="#" class="card-link ">Learn more → </a>
-            <p class="card-text"><i class="far fa-clock pr-2"></i> 10:00 AM 2:00 PM</p>
-        </div>
-        <div class="card eventscards bg-white shadow  shadow-xl p-2" style="width: 20rem;">
-          <div class="card-body d-flex flex-row">
-            <div class="bg-secondary rounded text-white mr-3" height="50px" width="50px" alt="avatar">
-              <p class="card-text">17 Oct</p>
-            </div>
-            <div>
-              <h5 class="card-title font-weight-bold mb-2">Federation University, Australia</h5>
-            </div>
-          </div>
-            <p class="card-text">Maiores voluptas laboriosam non dolorum perferendis fuga repellat aut. Blanditiis quos in minus. Voluptatum quia quia voluptas voluptatem vero ex possimus. Iure et consectetur dolorem dicta accusantium fugiat.</p>
-            <a href="#" class="card-link ">Learn more → </a>
-            <p class="card-text"><i class="far fa-clock pr-2"></i> 10:00 AM 2:00 PM</p>
         </div>
       </div>
+
+
+      <!-- The dots/circles -->
       <div class="container text-center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot dotevents" onclick="currentSlide(1)"></span>
+        <span class="dot dotevents" onclick="currentSlide(2)"></span>
+        <span class="dot doevents" onclick="currentSlide(3)"></span>
+        <span class="dot dotevents" onclick="currentSlide(4)"></span>
       </div>
     </div>
+
     <div class="container-fluid bg-light   pt-2">
         <div class="page-header text-center ">
           <h3>Countries We Covered</h3>

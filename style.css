@@ -56,7 +56,8 @@ margin-bottom: 15vh;
 .mySlides {
   height: 20vh;
 }
-div .slider{
+
+div .slider, div .sliderevents{
   display:flex!important;
   justify-content: space-around;
 }
@@ -89,12 +90,6 @@ div .slider{
   width: 20rem;
   border-radius: 0.5rem;
   border:none;
-}
-.eventspart{
-  height:700px;
-}
-.rowbgevents{
-  height:400px;
 }
 
 .footerbgcolor{
