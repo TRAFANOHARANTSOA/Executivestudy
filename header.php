@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="Executive study " content="c'est un site d'étudiant'" />
     <title></title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css">
   </head>
   <body>
@@ -45,7 +45,7 @@
             <div class="col-xl-4 col-lg-5 col-md-7 col-sm-10  headertitle  ">
               <h1>We Help to <span>Build</span> Your Dream</h1>
             </div>
-            <div class="col-xl-4 col-lg-5 col-md-7 col-sm-10 headerbtn">
+            <div class="container headerbtn">
               <button type="button" class="btn  btn-lg">Apply online →</button>
             </div>
             <div class="col-xl-4 col-lg-5 col-md-7 col-sm-10 headerfavicons">

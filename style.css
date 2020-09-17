@@ -45,10 +45,22 @@ background-color: #717cff;
 color:#FFFF;
 margin-bottom: 15vh;
 }
-
+.newsbtn .btn{
+background-color: #717cff;
+color:#FFFF;
+margin-top: 10vh;
+margin-left:45vw;
+}
+.newsbtn{
+width :100%;
+}
+.readybtn .btn{
+  background-color: #717cff;
+  color:#FFFF;
+}
 .slideshow-container {
   background-color: #FAFAFA;
-  height: 40vh;
+  height: 60vh;
   margin: auto;
   position:relative;
 }
@@ -59,7 +71,8 @@ margin-bottom: 15vh;
   width: 100%;
 }
 
-div .sliderfeatures, div .sliderevents{
+
+div .sliderfeatures, div .slidereventscards{
   display:flex!important;
   justify-content: space-around;
 }
@@ -94,6 +107,9 @@ div .sliderfeatures, div .sliderevents{
   border:none;
 }
 
+.events{
+  height:120vh;
+}
 .footerbgcolor{
   background-color:#717cff;
 }
