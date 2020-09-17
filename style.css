@@ -53,11 +53,13 @@ margin-bottom: 15vh;
   position:relative;
 }
 
-.mySlides {
+.mySlidesfeatures {
   height: 20vh;
+  display: table-cell;
+  width: 100%;
 }
 
-div .slider, div .sliderevents{
+div .sliderfeatures, div .sliderevents{
   display:flex!important;
   justify-content: space-around;
 }
@@ -97,7 +99,7 @@ div .slider, div .sliderevents{
 }
 
 .footerfavicons {
-    padding-top: 180px;
+  padding-top: 180px;
 }
 
 @media screen and (max-width: 692px){
