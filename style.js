@@ -21,6 +21,7 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+
 //backoffice//
 function connexion(){
   document.getElementById('connexion').style.display = "block";

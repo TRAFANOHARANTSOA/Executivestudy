@@ -1,4 +1,5 @@
 <?php include('header.php'); ?>
+<?php include('model.php'); ?>
     <!-- Slideshow container -->
   <div class="container-fluid slideshow-container">
     <div class="fontfeatures text-center pt-3 pb-5">
@@ -240,8 +241,7 @@
                     <p class="card-text">23 Déc</p>
                   </div>
                   <div>
-                    <h5 class="card-title font-weight-bold mb-2">Macquarie University, Sydney, Australia</h5>
-                  </div>
+                    </div>
                   </div>
                   <p class="card-text">Maiores voluptas laboriosam non dolorum perferendis fuga repellat aut. Blanditiis quos in minus. Voluptatum quia quia voluptas voluptatem vero ex possimus. Iure et consectetur dolorem dicta accusantium fugiat.</p>
                   <a href="#" class="card-link ">Learn more → </a>
@@ -332,29 +332,22 @@
           <h3>Countries We Covered</h3>
           <p>Sunt autem nusquam hoc epicurus in gravissimo bello animadversionis metu degendae praesidia firmissima. Torquatos nostros? quos tu paulo ante cum teneam sententiam, quid bonum esse vult.</p>
         </div>
+    <?php
+
+      $countries = $dB->query("SELECT `image`, `titre`, `contenu` FROM `countries`");
+        while($donnees = $countries->fetch()){
+
+    ?>
         <div class="row justify-content-around mt-5 mr-5 ml-5 ">
           <div class="card countriescards bg-light" style="width: 20rem;">
             <img src="image/australia.png" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-text">Study in Australia</h5>
-              <p class="card-text">Ut aut corporis accusantium illo ullam qui laudantium. Maxime rerum sunt et sequi sed qui rerum hic. Voluptatem maiores voluptatum voluptate porro harum. Facilis voluptatum eum est.</p>
-            </div>
-          </div>
-          <div class="card countriescards bg-light" style="width: 20rem;">
-            <img src="image/canada.png" class="card-img-top" alt="...">
-            <div class="card-body ">
-              <h5 class="card-text">Study in Canada</h5>
-              <p class="card-text">Ut aut corporis accusantium illo ullam qui laudantium. Maxime rerum sunt et sequi sed qui rerum hic. Voluptatem maiores voluptatum voluptate porro harum. Facilis voluptatum eum est.</p>
-            </div>
-          </div>
-          <div class="card countriescards bg-light" style="width: 20rem;">
-            <img src="image/uk.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-text">Study in UK</h5>
-              <p class="card-text">Ut aut corporis accusantium illo ullam qui laudantium. Maxime rerum sunt et sequi sed qui rerum hic. Voluptatem maiores voluptatum voluptate porro harum. Facilis voluptatum eum est.</p>
+              <h5 class="card-text"><?php echo $donnees['titre'];?></h5>
+              <p class="card-text"><?php echo $donnees['contenu'];?></p>
             </div>
           </div>
         </div>
+        <?php } $countries->closeCursor(); ?>
         <div class="container text-center mt-5 ">
           <span class="dot" onclick="currentSlide(1)"></span>
           <span class="dot" onclick="currentSlide(2)"></span>
@@ -419,4 +412,31 @@
     <button type="button" class="btn  btn-lg">Apply Online →  </button>
   </div>
 </div>
+
+<?php
+/*function thenewstitle(){
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "test";
+$dB = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+
+
+class TableRows extends RecursiveIteratorIterator {
+  function __construct($it) {
+    parent::__construct($it, self::LEAVES_ONLY);
+  }
+}
+  $stmt = $dB->prepare("SELECT `titre` FROM `news` WHERE 1");
+  $stmt->execute();
+  // set the resulting array to associative
+  $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+  foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
+    echo $v;
+  }
+}
+thenewstitle()*/
+?>
+
+
 <?php include('footer.php'); ?>

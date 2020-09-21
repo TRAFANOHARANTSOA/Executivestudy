@@ -42,7 +42,7 @@ require ('model.php');?>
     </form>
 
     <?php
-    if(isset($_POST['title']) && isset($_POST['content']) && isset($_POST['icon'])){
+    if(!empty($_POST['title']) && !empty($_POST['content']) && !empty($_POST['icon'])){
 
       $title = $_POST['title'];
       $content = $_POST['content'];
@@ -82,7 +82,7 @@ require ('model.php');?>
     </form>
 
     <?php
-    if(isset($_POST['date']) && isset($_POST['title']) && isset($_POST['image'])){
+    if(!empty($_POST['date']) && !empty($_POST['title']) && !empty($_POST['image'])){
 
       $date = $_POST['date'];
       $title = $_POST['title'];
@@ -119,7 +119,7 @@ require ('model.php');?>
     </form>
 
     <?php
-    if(isset($_POST['date']) && isset($_POST['title']) && isset($_POST['content']) && isset($_POST['hours'])){
+    if(!empty($_POST['date']) && !empty($_POST['title']) && !empty($_POST['content']) && !empty($_POST['hours'])){
 
       $date = $_POST['date'];
       $title = $_POST['title'];
@@ -161,7 +161,7 @@ require ('model.php');?>
     </form>
 
     <?php
-    if(isset($_POST['title']) && isset($_POST['content']) && isset($_POST['image'])){
+    if(!empty($_POST['title']) && !empty($_POST['content']) && !empty($_POST['image'])){
 
       $title = $_POST['title'];
       $content = $_POST['content'];
@@ -206,7 +206,7 @@ require ('model.php');?>
     </form>
 
     <?php
-    if(isset($_POST['firstname']) && isset($_POST['lastname']) && isset($_POST['job']) && isset($_POST['content']) && isset($_POST['image'])){
+    if(!empty($_POST['firstname']) && !empty($_POST['lastname']) && !empty($_POST['job']) && !empty($_POST['content']) && !empty($_POST['image'])){
 
       $firstname = $_POST['firstname'];
       $lastname = $_POST['lastname'];

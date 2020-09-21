@@ -155,7 +155,7 @@ function news(){
   $query = "CREATE TABLE IF NOT EXISTS `news`(
     `id_news` INT UNSIGNED NOT NULL AUTO_INCREMENT ,
     `image` VARCHAR(255) NOT NULL ,
-    `date` DATE NOT NULL ,
+    `datearticle` DATE NOT NULL ,
     `titre` VARCHAR(255) NOT NULL , PRIMARY KEY (`id_news`)) ENGINE = MyISAM;
   )";
   $request = $dB->prepare($query);
@@ -208,6 +208,10 @@ function testimonial(){
   $request->execute();
   $request->closeCursor();
 }
+
+
+
+
 
 // function essai(){
 //   $servername = "localhost";
