@@ -101,7 +101,8 @@ div .sliderfeatures, div .slidereventscards{
 .ourservices{
   height: 900px;
 }
-.servicescards, .newscards, .eventscards, .countriescards, .testimonialscards {
+
+.servicescards, .newscards, .eventscards, .countriescards, .testimonialscards, .countriescards{
   width: 20rem;
   border-radius: 0.5rem;
   border:none;
@@ -109,6 +110,11 @@ div .sliderfeatures, div .slidereventscards{
 
 .events{
   height:120vh;
+}
+
+div .countriescontainer{
+justify-content:space-around;
+margin-right: 0!important;
 }
 .footerbgcolor{
   background-color:#717cff;

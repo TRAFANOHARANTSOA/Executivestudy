@@ -199,9 +199,9 @@ function testimonial(){
   $query = "CREATE TABLE IF NOT EXISTS `testimonial`(
     `id_testimonial` INT UNSIGNED NOT NULL AUTO_INCREMENT ,
     `image` VARCHAR(255) NOT NULL ,
-    `prénom` VARCHAR(255) NOT NULL ,
+    `prenom` VARCHAR(255) NOT NULL ,
     `nom` VARCHAR(255) NOT NULL ,
-    `métier` VARCHAR(255) NOT NULL ,
+    `metier` VARCHAR(255) NOT NULL ,
     `contenu` TEXT NOT NULL , PRIMARY KEY (`id_testimonial`)) ENGINE = MyISAM;
   )";
   $request = $dB->prepare($query);
