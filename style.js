@@ -22,7 +22,7 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
-//backoffice//
+//PARTIE BACKOFFICE
 function connexion(){
   document.getElementById('connexion').style.display = "block";
   document.getElementById('inscription').style.display = "none";
@@ -47,17 +47,27 @@ passwordVerif.addEventListener('input', function(){
 
 // partie backoffice
 function countries(){
-  document.getElementById('form_all').style.display = "none";
   document.getElementById('form_countries').style.display = "flex";
+  document.getElementById('form_all').style.display = "none";
+  document.getElementById('form_featured').style.display = "none";
   document.getElementById('form_events').style.display = "none";
   document.getElementById('form_news').style.display = "none";
   document.getElementById('form_services').style.display = "none";
   document.getElementById('form_testimonial').style.display = "none";
 }
+function featured(){
+document.getElementById('form_featured').style.display = "flex";
+document.getElementById('form_all').style.display = "none";
+document.getElementById('form_countries').style.display = "none";
+document.getElementById('form_events').style.display = "none";
+document.getElementById('form_news').style.display = "none";
+document.getElementById('form_services').style.display = "none";
+document.getElementById('form_testimonial').style.display = "none";}
 function events(){
   document.getElementById('form_all').style.display = "none";
   document.getElementById('form_events').style.display = "flex";
   document.getElementById('form_countries').style.display = "none";
+  document.getElementById('form_featured').style.display = "none";
   document.getElementById('form_news').style.display = "none";
   document.getElementById('form_services').style.display = "none";
   document.getElementById('form_testimonial').style.display = "none";
@@ -65,6 +75,7 @@ function events(){
 function news(){
   document.getElementById('form_all').style.display = "none";
   document.getElementById('form_news').style.display = "flex";
+  document.getElementById('form_featured').style.display = "none";
   document.getElementById('form_events').style.display = "none";
   document.getElementById('form_countries').style.display = "none";
   document.getElementById('form_services').style.display = "none";
@@ -73,6 +84,7 @@ function news(){
 function services(){
   document.getElementById('form_all').style.display = "none";
   document.getElementById('form_services').style.display = "flex";
+  document.getElementById('form_featured').style.display = "none";
   document.getElementById('form_events').style.display = "none";
   document.getElementById('form_news').style.display = "none";
   document.getElementById('form_countries').style.display = "none";
@@ -81,6 +93,7 @@ function services(){
 function testimonial(){
   document.getElementById('form_testimonial').style.display = "flex";
   document.getElementById('form_events').style.display = "none";
+  document.getElementById('form_featured').style.display = "none";
   document.getElementById('form_news').style.display = "none";
   document.getElementById('form_services').style.display = "none";
   document.getElementById('form_countries').style.display = "none";
@@ -88,12 +101,15 @@ function testimonial(){
 }
 function seeall(){
   document.getElementById('form_all').style.display = "flex";
+  document.getElementById('form_featured').style.display = "none";
   document.getElementById('form_testimonial').style.display = "none";
   document.getElementById('form_events').style.display = "none";
   document.getElementById('form_news').style.display = "none";
   document.getElementById('form_services').style.display = "none";
   document.getElementById('form_countries').style.display = "none";
 }
+
+
 
 
 

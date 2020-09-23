@@ -3,9 +3,6 @@ body {
 font-family:'metropolis medium', arial, sans-serif;
 
 }
-.container-fluid{
-  max-width: 1540px;
-}
 .navbar-light .navbar-toggler {
     color: rgba(0,0,0,.5);
     border:none;
@@ -34,9 +31,10 @@ border-bottom: 2px solid #717cff!important;
 }
 .titlerow{
 display:block;
+margin-left: 7.5rem;
 }
 .headertitle{
-  padding-top: 15vh;
+  padding-top: 20vh;
   padding-bottom: 10vh;
 }
 
@@ -60,7 +58,7 @@ width :100%;
 }
 .slideshow-container {
   background-color: #FAFAFA;
-  height: 60vh;
+  height: 100vh;
   margin: auto;
   position:relative;
 }
@@ -101,21 +99,51 @@ div .sliderfeatures, div .slidereventscards{
 .ourservices{
   height: 900px;
 }
+.ourservicesrow{
+  padding-left: 10rem!important;
+  padding-right: 10rem!important;
+  padding-bottom:4rem!important;
+}
+.servicescards{
+  margin-bottom: 4rem!important;
+}
 
-.servicescards, .newscards, .eventscards, .countriescards, .testimonialscards, .countriescards{
+.servicescards, .countriescards, .testimonialscards, .countriescards{
   width: 20rem;
   border-radius: 0.5rem;
   border:none;
 }
 
+.newscarouselcontainer {
+  margin-top: 3rem!important;
+}
+.newscarouselitem{
+  display: flex!important;
+  justify-content: center;
+
+}
+.newscards, .eventscards{
+  width:23.5rem;
+  margin:2rem;
+}
+.eventscards{
+  width:30rem!important;
+  margin:2rem;
+  border:none;
+}
+.cardfootevents{
+  display: flex!important;
+  justify-content: space-between;
+  margin:2rem;
+}
 .events{
-  height:120vh;
+  height:80vh;
 }
 
 div .countriescontainer{
 justify-content:space-around;
-margin-right: 0!important;
 }
+
 .footerbgcolor{
   background-color:#717cff;
 }
@@ -129,6 +157,9 @@ margin-right: 0!important;
   background-image: none;
   }
 }
+
+
+
 /*backoffice*/
 #connexion{
   display: none;
@@ -156,10 +187,14 @@ h3 {
   align-items: center;
   flex-direction: column;
 }
+
 /* #form_countries{
   display: none;
 } */
 #form_events{
+  display: none;
+}
+#form_featured{
   display: none;
 }
 #form_news{
@@ -174,6 +209,10 @@ h3 {
 #form_all{
   display: none;
 }
+#form_delete{
+  display: none;
+}
+
 .sidebar button{
   margin-bottom: 2rem;
   padding: 1rem;
@@ -183,7 +222,7 @@ h3 {
   border-radius: 0px;
 }
 .sidebar{
-  padding-top: 5rem;
+  padding-top: 2rem;
   height: 100vh;
   background-color: #8471FF;
 }

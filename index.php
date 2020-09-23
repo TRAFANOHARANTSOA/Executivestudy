@@ -1,5 +1,22 @@
 <?php include('header.php'); ?>
 <?php include('model.php'); ?>
+
+<div class="headerbg">
+    <div class="container row titlerow">
+    <div class="col-xl-4 col-lg-5 col-md-7 col-sm-10  headertitle  ">
+      <h1>We Help to <span>Build</span> Your Dream</h1>
+    </div>
+    <div class="container headerbtn">
+      <button type="button" class="btn  btn-lg">Apply online →</button>
+    </div>
+    <div class="col-xl-4 col-lg-5 col-md-7 col-sm-10 headerfavicons">
+      <a href="#"><img src="image/facebook.png" alt=""></a>
+      <a href="#"><img src="image/twitter.png" alt=""></a>
+      <a href="#"> <img src="image/insta.png" alt=""></a>
+    </div>
+  </div>
+</div>
+
     <!-- Slideshow container -->
   <div class="container-fluid slideshow-container">
     <div class="fontfeatures text-center pt-3 pb-5">
@@ -8,70 +25,16 @@
     <!-- Full-width images with number and caption text -->
       <div class="mySlidesfeatures">
         <div class="sliderfeatures">
-          
+          <?php
+        $featured = $dB->query("SELECT `image` FROM `featured`");
+          while($donnees = $featured->fetch()){
+      ?>
         <div class="slideslogo">
-        <a href="#"><img src="image/macquarieuniv.png" class="d-block img-fluid mx-auto pt-3"  alt="macquarieuniv"></a>
+        <a href="#"><img src="image/<?php echo $donnees['image'];?>" class="d-block img-fluid mx-auto pt-3"  alt="macquarieuniv"></a>
         </div>
-        <div class="slideslogo">
-        <a href="#"><img src="image/charlesuniv.png" class="d-block img-fluid mx-auto pt-3" alt="charlesuniv"></a>
-        </div>
-        <div class="slideslogo">
-        <a href="#"><img src="image/newcastleuniv.png" class="d-block img-fluid mx-auto pt-3" alt="newcastleuniv"> </a>
-        </div>
-        <div class="slideslogo">
-        <a href="#"><img src="image/latrobeuniv.png" class="d-block img-fluid mx-auto pt-3" alt="latrobeuniv"></a>
-        </div>
+        <?php } $featured->closeCursor(); ?>
       </div>
     </div>
-    <div class="mySlidesfeatures">
-      <div class="sliderfeatures">
-      <div class="slideslogo">
-
-      <a href="#"><img src="image/charlesuniv.png" class="d-block img-fluid mx-auto pt-3" alt="charlesuniv"></a>
-      </div>
-      <div class="slideslogo">
-    <a href="#"><img src="image/macquarieuniv.png" class="d-block img-fluid mx-auto pt-3"  alt="macquarieuniv"></a>
-      </div>
-      <div class="slideslogo">
-      <a href="#"><img src="image/newcastleuniv.png" class="d-block img-fluid mx-auto pt-3" alt="newcastleuniv"> </a>
-      </div>
-      <div class="slideslogo">
-      <a href="#"><img src="image/latrobeuniv.png" class="d-block img-fluid mx-auto pt-3" alt="latrobeuniv"></a>
-      </div>
-    </div>
-  </div>
-  <div class="mySlidesfeatures">
-    <div class="sliderfeatures">
-    <div class="slideslogo">
-    <a href="#"><img src="image/macquarieuniv.png" class="d-block img-fluid mx-auto pt-3"  alt="macquarieuniv"></a>
-    </div>
-    <div class="slideslogo">
-    <a href="#"><img src="image/newcastleuniv.png" class="d-block img-fluid mx-auto pt-3" alt="newcastleuniv"> </a>
-    </div>
-    <div class="slideslogo">
-    <a href="#"><img src="image/charlesuniv.png" class="d-block img-fluid mx-auto pt-3" alt="charlesuniv"></a>
-    </div>
-    <div class="slideslogo">
-    <a href="#"><img src="image/latrobeuniv.png" class="d-block img-fluid mx-auto pt-3" alt="latrobeuniv"></a>
-    </div>
-  </div>
-</div>
-<div class="mySlidesfeatures">
-  <div class="sliderfeatures">
-  <div class="slideslogo">
-  <a href="#"><img src="image/macquarieuniv.png" class="d-block img-fluid mx-auto pt-3"  alt="macquarieuniv"></a>
-  </div>
-  <div class="slideslogo">
-  <a href="#"><img src="image/charlesuniv.png" class="d-block img-fluid mx-auto pt-3" alt="charlesuniv"></a>
-  </div>
-  <div class="slideslogo">
-  <a href="#"><img src="image/latrobeuniv.png" class="d-block img-fluid mx-auto pt-3" alt="latrobeuniv"></a>
-  </div>
-  <div class="slideslogo">
-  <a href="#"><img src="image/newcastleuniv.png" class="d-block img-fluid mx-auto pt-3" alt="newcastleuniv"> </a>
-  </div>
-</div>
-</div>
 
   <!-- The dots/circles -->
   <div class="container text-center">
@@ -82,7 +45,14 @@
   </div>
 </div>
 
-
+<!--<?php
+/*$services = $dB->query("SELECT `icone`, `titre`, `contenu` FROM `services`");
+  while($donnees = $services->fetch()){*/
+?>
+<div class="slideslogo">
+<a href="#"><img src="image/<?php/* echo $donnees['image'];*/?>" class="d-block img-fluid mx-auto pt-3"  alt="macquarieuniv"></a>
+</div>
+<?php /*} $services->closeCursor(); */?>-->
 
   <div class="container-fluid bg-light pt-2 ourservices">
       <div class="page-header text-center ">
@@ -90,7 +60,7 @@
           <p>Executive Trade International is an University Application Centre, guiding Bangladeshi students to Australian, British, Canadian and Irish universities!</p>
       </div>
 
-      <div class="row justify-content-around mt-5 ml-5 mr-5 pr-5 pl-5  ">
+      <div class="row justify-content-around ourservicesrow ">
               <?php
             $services = $dB->query("SELECT `icone`, `titre`, `contenu` FROM `services`");
               while($donnees = $services->fetch()){
@@ -107,19 +77,18 @@
         </div>
       </div>
 
-    <div class="container-fluid bg-light  pt-2 pb-4 featurescarrousel">
+    <div class="container-fluid bg-light  pt-2 pb-4 newscarousel">
       <div class="fontfeatures text-center ">
         <h3 class="text-capitalize mt-5 mb-5 ">News</h3>
         <p>Sunt autem nusquam hoc epicurus in gravissimo bello animadversionis metu degendae praesidia firmissima. Torquatos nostros? quos tu paulo ante cum teneam sententiam, quid bonum esse vult.</p>
       </div>
-          <div id="carousel" class="carousel slide mt-5" data-interval="2000" data-ride="carousel" >
+          <div id="carousel" class="carousel slide newscarouselcontainer" data-interval="2000" data-ride="carousel" >
             <div class="carousel-inner ">
-                  <div class="carousel-item active carouselimg">
+              <div class="carousel-item active carouselimg newscarouselitem">
                   <?php
                 $news = $dB->query("SELECT `image`, `datearticle`, `titre` FROM `news`");
-                  while($donnees = $news->fetch()){
-              ?>
-                  <div class="card  shadow shadow-xl  servicescards">
+                  while($donnees = $news->fetch()){?>
+                  <div class="card  shadow shadow-xl  newscards">
                     <div class="card-body">
                       <img src="image/<?php echo $donnees['image'];?>">
                       <p class="card-text"><?php echo $donnees['datearticle'];?></p>
@@ -153,77 +122,28 @@
           <div class="container mySlidesevents">
             <div class="container sliderevents">
               <div class="container slidereventscards">
-          			<div class="card  eventscards bg-white shadow  shadow-xl p-2 rowbgevents" style="width: 20rem;">
-          			  <div class="card-body d-flex flex-row">
+                <?php
+              $events = $dB->query("SELECT `date`, `titre`,`contenu`, `horaires` FROM `events`");
+                while($donnees = $events->fetch()){?>
+          			<div class="card  eventscards bg-white shadow  shadow-xl p-2">
+          			  <div class="card-body d-flex flex-row ">
           				<div class="bg-secondary rounded text-white mr-3" height="50px" width="50px" alt="avatar">
-          				  <p class="card-text">23 Déc</p>
+          				  <p class="card-text text-center mt-1"><?php echo $donnees['date'];?></p>
           				</div>
           				<div>
-          				  <h5 class="card-title font-weight-bold mb-2">Macquarie University, Sydney, Australia</h5>
+          				  <h5 class="card-title font-weight-bold mb-2"><?php echo $donnees['titre'];?></h5>
           				</div>
           			  </div>
-          				<p class="card-text">Maiores voluptas laboriosam non dolorum perferendis fuga repellat aut. Blanditiis quos in minus. Voluptatum quia quia voluptas voluptatem vero ex possimus. Iure et consectetur dolorem dicta accusantium fugiat.</p>
-          				<a href="#" class="card-link ">Learn more → </a>
-          				<p class="card-text"><i class="far fa-clock pr-2"></i> 10:00 AM 2:00 PM</p>
+          				<p class="card-text mr-3 ml-3"><?php echo $donnees['contenu'];?></p>
+                  <div class="cardfootevents">
+                    <a href="#" class="card-link ">Learn more → </a>
+            				<p class="card-text"><i class="far fa-clock pr-2"></i><?php echo $donnees['horaires'];?></p>
+                  </div>
           			</div>
-                  <div class="card eventscards bg-white shadow  shadow-xl p-2" style="width: 20rem;">
-                    <div class="card-body d-flex flex-row">
-                      <div class="bg-secondary rounded text-white mr-3" height="50px" width="50px" alt="avatar">
-                        <p class="card-text">17 Oct</p>
-                      </div>
-                      <div>
-                        <h5 class="card-title font-weight-bold mb-2">Federation University, Australia</h5>
-                      </div>
-                    </div>
-                      <p class="card-text">Maiores voluptas laboriosam non dolorum perferendis fuga repellat aut. Blanditiis quos in minus. Voluptatum quia quia voluptas voluptatem vero ex possimus. Iure et consectetur dolorem dicta accusantium fugiat.</p>
-                      <a href="#" class="card-link ">Learn more → </a>
-                      <p class="card-text"><i class="far fa-clock pr-2"></i> 10:00 AM 2:00 PM</p>
-                  </div>
+                <?php } $events->closeCursor(); ?>
               </div>
-
-              <div class="container slidereventscards">
-                <div class="card  eventscards bg-white shadow  shadow-xl p-2 rowbgevents" style="width: 20rem;">
-                  <div class="card-body d-flex flex-row">
-                  <div class="bg-secondary rounded text-white mr-3" height="50px" width="50px" alt="avatar">
-                    <p class="card-text">23 Déc</p>
-                  </div>
-                  <div>
-                    </div>
-                  </div>
-                  <p class="card-text">Maiores voluptas laboriosam non dolorum perferendis fuga repellat aut. Blanditiis quos in minus. Voluptatum quia quia voluptas voluptatem vero ex possimus. Iure et consectetur dolorem dicta accusantium fugiat.</p>
-                  <a href="#" class="card-link ">Learn more → </a>
-                  <p class="card-text"><i class="far fa-clock pr-2"></i> 10:00 AM 2:00 PM</p>
-                </div>
-                  <div class="card eventscards bg-white shadow  shadow-xl p-2" style="width: 20rem;">
-                    <div class="card-body d-flex flex-row">
-                      <div class="bg-secondary rounded text-white mr-3" height="50px" width="50px" alt="avatar">
-                        <p class="card-text">17 Oct</p>
-                      </div>
-                      <div>
-                        <h5 class="card-title font-weight-bold mb-2">Federation University, Australia</h5>
-                      </div>
-                    </div>
-                      <p class="card-text">Maiores voluptas laboriosam non dolorum perferendis fuga repellat aut. Blanditiis quos in minus. Voluptatum quia quia voluptas voluptatem vero ex possimus. Iure et consectetur dolorem dicta accusantium fugiat.</p>
-                      <a href="#" class="card-link ">Learn more → </a>
-                      <p class="card-text"><i class="far fa-clock pr-2"></i> 10:00 AM 2:00 PM</p>
-                  </div>
-                  <div class="card eventscards bg-white shadow  shadow-xl p-2" style="width: 20rem;">
-                    <div class="card-body d-flex flex-row">
-                      <div class="bg-secondary rounded text-white mr-3" height="50px" width="50px" alt="avatar">
-                        <p class="card-text">17 Oct</p>
-                      </div>
-                      <div>
-                        <h5 class="card-title font-weight-bold mb-2">Federation University, Australia</h5>
-                      </div>
-                    </div>
-                      <p class="card-text">Maiores voluptas laboriosam non dolorum perferendis fuga repellat aut. Blanditiis quos in minus. Voluptatum quia quia voluptas voluptatem vero ex possimus. Iure et consectetur dolorem dicta accusantium fugiat.</p>
-                      <a href="#" class="card-link ">Learn more → </a>
-                      <p class="card-text"><i class="far fa-clock pr-2"></i> 10:00 AM 2:00 PM</p>
-                  </div>
-            </div>
             </div>
           </div>
-
 
       <!-- The dots/circles -->
       <div class="container text-center">
@@ -239,7 +159,7 @@
             <h3>Countries We Covered</h3>
             <p>Sunt autem nusquam hoc epicurus in gravissimo bello animadversionis metu degendae praesidia firmissima. Torquatos nostros? quos tu paulo ante cum teneam sententiam, quid bonum esse vult.</p>
           </div>
-      <div class="container row row-cols-6 countriescontainer">
+      <div class="row countriescontainer">
         <?php
           $countries = $dB->query("SELECT `image`, `titre`, `contenu` FROM `countries`");
             while($donnees = $countries->fetch()){

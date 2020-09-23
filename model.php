@@ -96,6 +96,26 @@ function connectUser($email, $passwordUser){
 
 
 // BACK OFFICE
+function featured(){
+  $servername = "localhost";
+  $username = "root";
+  $password = "";
+  $dbname = "test";
+  try{
+    $dB = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    $dB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  }catch(Exception $e){
+    die('erreur:' . $e->getMessage());
+  }
+  $query = "CREATE TABLE IF NOT EXISTS `featured`(
+    `id_featured` INT UNSIGNED NOT NULL AUTO_INCREMENT ,
+    `image` VARCHAR(255) NOT NULL , PRIMARY KEY (`id_featured`)) ENGINE = MyISAM;
+  )";
+  $request = $dB->prepare($query);
+  $request->execute();
+  $request->closeCursor();
+}
+
 function countries(){
   $servername = "localhost";
   $username = "root";
@@ -134,7 +154,7 @@ function events(){
     `date` DATE NOT NULL ,
     `titre` VARCHAR(255) NOT NULL ,
     `contenu` TEXT NOT NULL ,
-    `horaires` DATETIME NOT NULL , PRIMARY KEY (`id_events`)) ENGINE = MyISAM;
+    `horaires` TIME NOT NULL , PRIMARY KEY (`id_events`)) ENGINE = MyISAM;
   )";
   $request = $dB->prepare($query);
   $request->execute();
@@ -155,7 +175,7 @@ function news(){
   $query = "CREATE TABLE IF NOT EXISTS `news`(
     `id_news` INT UNSIGNED NOT NULL AUTO_INCREMENT ,
     `image` VARCHAR(255) NOT NULL ,
-    `datearticle` DATE NOT NULL ,
+    `date` DATE NOT NULL ,
     `titre` VARCHAR(255) NOT NULL , PRIMARY KEY (`id_news`)) ENGINE = MyISAM;
   )";
   $request = $dB->prepare($query);
@@ -199,19 +219,15 @@ function testimonial(){
   $query = "CREATE TABLE IF NOT EXISTS `testimonial`(
     `id_testimonial` INT UNSIGNED NOT NULL AUTO_INCREMENT ,
     `image` VARCHAR(255) NOT NULL ,
-    `prenom` VARCHAR(255) NOT NULL ,
+    `prénom` VARCHAR(255) NOT NULL ,
     `nom` VARCHAR(255) NOT NULL ,
-    `metier` VARCHAR(255) NOT NULL ,
+    `métier` VARCHAR(255) NOT NULL ,
     `contenu` TEXT NOT NULL , PRIMARY KEY (`id_testimonial`)) ENGINE = MyISAM;
   )";
   $request = $dB->prepare($query);
   $request->execute();
   $request->closeCursor();
 }
-
-
-
-
 
 // function essai(){
 //   $servername = "localhost";
@@ -259,6 +275,7 @@ function testimonial(){
 // }
 
 function createTable(){
+  featured();
   countries();
   events();
   news();
