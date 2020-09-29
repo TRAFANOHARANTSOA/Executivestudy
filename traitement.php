@@ -68,7 +68,4 @@ function check($input){
   htmlspecialchars($input);
   return $input;
 }
-
-
-
  ?>

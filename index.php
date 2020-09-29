@@ -23,19 +23,19 @@
       <h3 class="text-capitalize">featured universities</h3>
     </div>
     <!-- Full-width images with number and caption text -->
-      <div class="mySlidesfeatures">
-        <div class="sliderfeatures">
-          <?php
-        $featured = $dB->query("SELECT `image` FROM `featured`");
-          while($donnees = $featured->fetch()){
-      ?>
-        <div class="slideslogo">
-        <a href="#"><img src="image/<?php echo $donnees['image'];?>" class="d-block img-fluid mx-auto pt-3"  alt="macquarieuniv"></a>
-        </div>
-        <?php } $featured->closeCursor(); ?>
-      </div>
-    </div>
 
+      <div class="mySlidesFeatures">
+        <div class="sliderFeatures">
+          <?php
+            $featured = $dB->query("SELECT `image` FROM `featured`");
+              while($donnees = $featured->fetch()){
+          ?>
+          <div class="slideslogo">
+            <a href="#"><img src="image/<?php echo $donnees['image'];?>" class="d-block img-fluid mx-auto pt-3"  alt="macquarieuniv"></a>
+          </div>
+        <?php } $featured->closeCursor(); ?>
+        </div>
+      </div>
   <!-- The dots/circles -->
   <div class="container text-center">
     <span class="dot dotfeatures" onclick="currentSlide(1)"></span>
@@ -55,13 +55,13 @@
 <?php /*} $services->closeCursor(); */?>-->
 
   <div class="container-fluid bg-light pt-2 ourservices">
-      <div class="page-header text-center ">
+    <div class="page-header text-center ">
         <h3>Our services</h3>
           <p>Executive Trade International is an University Application Centre, guiding Bangladeshi students to Australian, British, Canadian and Irish universities!</p>
-      </div>
+    </div>
 
-      <div class="row justify-content-around ourservicesrow ">
-              <?php
+    <div class="row justify-content-around ourservicesrow ">
+          <?php
             $services = $dB->query("SELECT `icone`, `titre`, `contenu` FROM `services`");
               while($donnees = $services->fetch()){
           ?>
@@ -74,44 +74,69 @@
               </div>
             </div>
           <?php } $services->closeCursor(); ?>
+      </div>
+  </div>
+
+
+<?php
+  $news = $dB->query("SELECT `image`, `date`, `titre` FROM `news`");?>
+  <div class="container-fluid bg-light  pt-2 pb-4 ">
+    <div class="row">
+      <div class="col-lg-10">
+        <div class="fontnews text-center ">
+            <h3 class="text-capitalize mt-5 mb-5 ">News</h3>
+            <p>Sunt autem nusquam hoc epicurus in gravissimo bello animadversionis metu degendae praesidia firmissima. Torquatos nostros? quos tu paulo ante cum teneam sententiam, quid bonum esse vult.</p>
         </div>
+        <div id="carouselExampleCaptions" class="carousel slide newscarouselcontainer" data-interval="2000" data-ride="carousel" >
+          <ul class="carousel-indicators">
+            <?php
+            $i = 0;
+            foreach ($news as $row) {
+              $actives ='';
+              if($i == 0){
+                $actives = 'active';
+              }
+             ?>
+            <li data-target="#carouselExampleCaptions" data-slide-to="<?= $i;  ?>" class="<?= $actives; ?>"></li>
+
+            <?php $i++; } ?>
+          </ul>
+
+      <div class="carousel-inner ">
+<?php
+$news = $dB->query("SELECT `image`, `date`, `titre` FROM `news` Limit 3");?>
+        <?php
+        $i = 0;
+        foreach ($news as $row) {
+          $actives ='';
+          if($i == 0){
+            $actives = 'active';
+          }
+         ?>
+        <div class="carousel-item <?= $actives; ?>">
+                <img src="image/<?=$row['image'];?>" width="100%" height ="400" >
+                <p class="card-text"><?php echo $row['date']; ?></p>
+                <h4 class="card-subtitle mb-2 text-muted"><?php echo $row['titre'];?></h4>
+              <a href="#" class="card-link ">Learn more → </a>-->
+        </div>
+        <?php $i++; } ?>
       </div>
 
-    <div class="container-fluid bg-light  pt-2 pb-4 newscarousel">
-      <div class="fontfeatures text-center ">
-        <h3 class="text-capitalize mt-5 mb-5 ">News</h3>
-        <p>Sunt autem nusquam hoc epicurus in gravissimo bello animadversionis metu degendae praesidia firmissima. Torquatos nostros? quos tu paulo ante cum teneam sententiam, quid bonum esse vult.</p>
-      </div>
-          <div id="carousel" class="carousel slide newscarouselcontainer" data-interval="2000" data-ride="carousel" >
-            <div class="carousel-inner ">
-              <div class="carousel-item active carouselimg newscarouselitem">
-                  <?php
-                $news = $dB->query("SELECT `image`, `datearticle`, `titre` FROM `news`");
-                  while($donnees = $news->fetch()){?>
-                  <div class="card  shadow shadow-xl  newscards">
-                    <div class="card-body">
-                      <img src="image/<?php echo $donnees['image'];?>">
-                      <p class="card-text"><?php echo $donnees['datearticle'];?></p>
-                      <h4 class="card-subtitle mb-2 text-muted"><?php echo $donnees['titre'];?></h4>
-                    <a href="#" class="card-link ">Learn more → </a>
-                    </div>
-                  </div>
-                <?php } $news->closeCursor(); ?>
-                  </div>
-                <a class="carousel-control-prev " href="#carousel" role="button" data-slide="prev">
-                  <span class="carousel-control-prev-icon " aria-hidden="true"></span>
-                  <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Next</span>
-                </a>
-            </div>
+        <a class="carousel-control-prev " href="#carouselExampleCaptions" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon " aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
       </div>
       <div class="col-xl-4 col-lg-5 col-md-7 col-sm-10  newsbtn">
           <button type="button" class="btn  btn-lg">Join here  → </button>
-      </div>
     </div>
+    </div>
+  </div>
+</div>
 
     <div class="container-fluid slideshow-container events">
         <div class="fontfeatures text-center pt-3 pb-5">

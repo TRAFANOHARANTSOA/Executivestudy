@@ -65,14 +65,11 @@ width :100%;
 
 .mySlidesfeatures {
   height: 20vh;
-  display: table-cell;
+  display: flex!important;
   width: 100%;
 }
-
-
-div .sliderfeatures, div .slidereventscards{
+.sliderFeatures{
   display:flex!important;
-  justify-content: space-around;
 }
 /* Hide the images by default */
 
@@ -92,7 +89,7 @@ div .sliderfeatures, div .slidereventscards{
   background-color: #717171;
 }
 
-.fontfeatures h3{
+.fontfeatures .fontnews h3{
   font-size:30px;
 }
 
