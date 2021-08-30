@@ -79,7 +79,7 @@
 
 
 <?php
-  $news = $dB->query("SELECT `image`, `date`, `titre` FROM `news`");?>
+$news = $dB->query("SELECT `image`, `date`, `titre` FROM `news`");?>
   <div class="container-fluid bg-light  pt-2 pb-4 ">
     <div class="row">
       <div class="col-lg-10">
@@ -87,7 +87,7 @@
             <h3 class="text-capitalize mt-5 mb-5 ">News</h3>
             <p>Sunt autem nusquam hoc epicurus in gravissimo bello animadversionis metu degendae praesidia firmissima. Torquatos nostros? quos tu paulo ante cum teneam sententiam, quid bonum esse vult.</p>
         </div>
-        <div id="carouselExampleCaptions" class="carousel slide newscarouselcontainer" data-interval="2000" data-ride="carousel" >
+        <div id="carouselExampleCaptions" class="carousel slide newscarouselcontainer" data-interval="10000" data-ride="carousel" >
           <ul class="carousel-indicators">
             <?php
             $i = 0;
@@ -102,25 +102,25 @@
             <?php $i++; } ?>
           </ul>
 
-      <div class="carousel-inner ">
-<?php
-$news = $dB->query("SELECT `image`, `date`, `titre` FROM `news` Limit 3");?>
-        <?php
-        $i = 0;
-        foreach ($news as $row) {
-          $actives ='';
-          if($i == 0){
-            $actives = 'active';
-          }
-         ?>
-        <div class="carousel-item <?= $actives; ?>">
-                <img src="image/<?=$row['image'];?>" width="100%" height ="400" >
-                <p class="card-text"><?php echo $row['date']; ?></p>
-                <h4 class="card-subtitle mb-2 text-muted"><?php echo $row['titre'];?></h4>
-              <a href="#" class="card-link ">Learn more → </a>-->
+      <div class="carousel-inner newscarousel">
+      <?php
+      $news = $dB->query("SELECT `image`, `date`, `titre` FROM `news`");?>
+      <?php
+      $i = 0;
+      foreach ($news as $row) {
+        $actives ='';
+        if($i == 0){
+          $actives = 'active';
+        }
+      ?>
+        <div class="carousel-item <?= $actives; ?> newsitems">
+            <img src="image/<?=$row['image'];?>">
+            <p class="card-text"><?=$row['date']; ?></p>
+            <h4 class="card-subtitle mb-2 text-muted"><?=$row['titre'];?></h4>
+            <a href="#" class="card-link ">Learn more → </a>
         </div>
         <?php $i++; } ?>
-      </div>
+        </div>
 
         <a class="carousel-control-prev " href="#carouselExampleCaptions" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon " aria-hidden="true"></span>
@@ -138,13 +138,13 @@ $news = $dB->query("SELECT `image`, `date`, `titre` FROM `news` Limit 3");?>
   </div>
 </div>
 
-    <div class="container-fluid slideshow-container events">
+    <!-- <div class="container-fluid slideshow-container events">
         <div class="fontfeatures text-center pt-3 pb-5">
           <h3>Upcoming University Events</h3>
           <p>Sunt autem nusquam hoc epicurus in gravissimo bello animadversionis metu degendae praesidia firmissima. Torquatos nostros? quos tu paulo ante cum teneam sententiam, quid bonum esse vult.</p>
-        </div>
+        </div> -->
         <!-- Full-width images with number and caption text -->
-          <div class="container mySlidesevents">
+          <!-- <div class="container mySlidesevents">
             <div class="container sliderevents">
               <div class="container slidereventscards">
                 <?php
@@ -168,16 +168,16 @@ $news = $dB->query("SELECT `image`, `date`, `titre` FROM `news` Limit 3");?>
                 <?php } $events->closeCursor(); ?>
               </div>
             </div>
-          </div>
+          </div> -->
 
       <!-- The dots/circles -->
-      <div class="container text-center">
+      <!-- <div class="container text-center">
         <span class="dot dotevents" onclick="currentSlide(1)"></span>
         <span class="dot dotevents" onclick="currentSlide(2)"></span>
         <span class="dot dotevents" onclick="currentSlide(3)"></span>
         <span class="dot dotevents" onclick="currentSlide(4)"></span>
       </div>
-    </div>
+    </div> -->
 
     <div class="container-fluid bg-light pt-2 countries">
           <div class="page-header text-center ">
@@ -185,10 +185,10 @@ $news = $dB->query("SELECT `image`, `date`, `titre` FROM `news` Limit 3");?>
             <p>Sunt autem nusquam hoc epicurus in gravissimo bello animadversionis metu degendae praesidia firmissima. Torquatos nostros? quos tu paulo ante cum teneam sententiam, quid bonum esse vult.</p>
           </div>
       <div class="row countriescontainer">
-        <?php
-          $countries = $dB->query("SELECT `image`, `titre`, `contenu` FROM `countries`");
-            while($donnees = $countries->fetch()){
-        ?>
+  <?php
+    $countries = $dB->query("SELECT `image`, `titre`, `contenu` FROM `countries`");
+      while($donnees = $countries->fetch()){
+  ?>
           <div class="card countriescards bg-light">
             <img src="image/<?php echo $donnees['image'];?>" class="card-img-top" alt="...">
             <div class="card-body">

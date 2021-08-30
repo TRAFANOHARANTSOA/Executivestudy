@@ -58,7 +58,6 @@ width :100%;
 }
 .slideshow-container {
   background-color: #FAFAFA;
-  height: 100vh;
   margin: auto;
   position:relative;
 }
@@ -114,11 +113,19 @@ width :100%;
 .newscarouselcontainer {
   margin-top: 3rem!important;
 }
-.newscarouselitem{
+.newscarouselcontainer{
+width: 25vw;
+margin-left: 50vw;
+transform: translate(-50%);
+}
+.carousel-control-next-icon, .carousel-control-prev-icon{
+  background-color:#0000ff;
+}
+/*.newscarouselitem{
   display: flex!important;
   justify-content: center;
+}*/
 
-}
 .newscards, .eventscards{
   width:23.5rem;
   margin:2rem;

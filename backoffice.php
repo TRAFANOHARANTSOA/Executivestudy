@@ -55,7 +55,7 @@ require ('model.php');?>
 
 
 <!-- PARTIE SERVICES -->
-    <form class="form" id="form_services" action="backoffice.php" method="post" enctype="multipart/form-data">
+    <form class="form" id="form_services " action="backoffice.php" method="post" enctype="multipart/form-data">
       <h4 class="mb-5 text-uppercase">Our Services :</h4>
 
       <div class="form-file">
@@ -255,7 +255,7 @@ require ('model.php');?>
       $image = $_FILES['image']['name'];
       $target ='image/'.$image;
       move_uploaded_file($_FILES['image']['tmp_name'],$target);
-      $query = "INSERT INTO `testimonial`(`image`,`prénom`, `nom`, `métier`, `contenu`) VALUES (:image,:firstname,:lastname,:job,:content)";
+      $query = "INSERT INTO `testimonial`(`image`,`prenom`, `nom`, `metier`, `contenu`) VALUES (:image,:firstname,:lastname,:job,:content)";
       $arrayValue = [
         ':image' =>$image,
         ':firstname' =>$firstname,
